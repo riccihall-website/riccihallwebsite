@@ -59,7 +59,7 @@
 				<div class="three columns">
 				<ul id="globalcontact">
 					<li id="globalnews">
-						<a href="#"><div>Hall News</div></a>
+						<a href="freshman.html"><div>Freshmen<br>page</div></a>
 					</li>
 					<li id="globalnews1">
 						<a href="calendar.html"><div>Calendar</div></a>
