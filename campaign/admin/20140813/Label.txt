@@ -1,0 +1,29 @@
+34	FeedbackForm	Feedback Form::意見書
+18	PleaseEnter	Please enter ::請輸入
+13	Name	Name::姓名
+14	Email	Email::電郵
+24	Phone	Phone::電話
+25	Fax	Fax::傳真
+43	File	File::檔案
+44	SubmissionCode	Submission Code::遞交編號
+37	Username	Username::用戶
+35	Password	Password::密碼
+19	Content	Content::內容
+15	Datetime	Datetime::日期/時間
+16	Message	Message::留言
+17	Download	Download::下載
+32	Search	Search::尋找
+28	SearchNow	Search now::立即尋找
+20	Page	Page::頁
+11	More	More::其他
+4	Enlarge	Enlarge::放大
+31	Go	Go::進入
+42	Back	Back::返回
+36	MemberLogin	Member Login::會員登入
+30	PublicEducation	Public Education::公共教育
+38	AbstractSuccess	Thank you for your submission. <br>Please mark your submission code which can be used for checking later.::多謝，請記低以下編號，方便查閱。
+41	AbstractFail	Sorry, submission fail. Please try later.::對不起！遞交未能完成，請稍後再試！
+40	ContactSuccess	Thank you! We will get back to you soon.::謝謝！我們會盡快回覆！
+39	ContactFail	Sorry, email not sent. Please try later.::對不起！電郵未能發出，請稍後再試！
+45	AllRightsReserved	All rightsreserved::版權所有 不得轉載
+46	ContactUs	Contact Us::聯絡我們

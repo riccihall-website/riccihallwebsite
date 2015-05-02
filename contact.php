@@ -1,0 +1,277 @@
+<?php
+
+		if(isset($_REQUEST['Email'])) {
+
+			$message = " ";
+			
+			$message .= "Name: " . $_REQUEST['Name'] . "\n";
+			$message .= "Email: " . $_REQUEST['Email'] . "\n\n";			
+			$message .= "Phone: " . $_REQUEST['Phone'] . "\n\n\n";
+			
+			$message .= "Message: " . $_REQUEST['Message'] . "\n";
+			
+			$to = 'rhsa@hkusua.hku.hk';
+			$subject = 'Message from Ricci Website';
+			$header = 'From: Ricci Website Message Form';
+			
+            if (mail($to, $subject, $message, $header)) {
+              echo 'Your message has been sent.';
+            } else {
+              echo 'There was a problem sending the message.';
+            }
+            
+            die();
+        
+        }
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Contact | Ricci Hall, The University of Hong Kong</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="keywords" content="Ricci Hall, Ricci, University of Hong Kong, Hall, HKU">
+		<meta name="description" content="Contact us at Ricci Hall, 93 Pok Fu Lam Road.">
+		<meta http-equiv="Cache-Control" Content="No-Cache">
+		<link rel="stylesheet" href="main.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+	</head>
+	<body>
+		<header class="container">
+			<div class="row">
+			<div class="panel">
+				<div class="four columns">
+				<div id="globallogo">
+				<a href="http://www.ricci.hku.hk"></a>
+				</div></div>
+				<div class="five columns">
+				<ul id="globalnav">
+					<li><a href="history.html">Hall History</a></li>
+					<li><a href="">Hall Life</a></li>
+					<li><a href="sports.html">Sports</a></li>
+					<li><a href="">Cultural Activities</a></li>
+				</ul>
+				</div>
+				<div class="three columns">
+				<ul id="globalcontact">
+					<li id="globalnews">
+						<a href="#"><div>Hall News</div></a>
+					</li>
+					<li id="globalnews1">
+						<a href="calendar.html"><div>Calendar</div></a>
+					</li>
+					<li id="jttrigger-0">
+						<a href="contact.html"><div class="active">Contact</div></a>
+					</li>
+				</ul>
+				<div id="jttip-0" class="jttip" style="display:none;"><div class="jttipcontent">
+					<div class="bg-wrapper">
+						<div class="contactrow">
+							Phone: <strong>+852 2546 1221</strong>
+						</div>
+						<div class="contactrow">
+							Fax: <strong>+852 2517 0280</strong>
+						</div>
+						<div class="contactrow">
+							<a href="mailto:rhsa@hkusua.hku.hk?subject=[Email From Website]"><strong>rhsa@hkusua.hku.hk</strong></a>
+						</div>
+						<ul class="vcard">
+							<li class="fn">Ricci Hall</li>
+							<li>93, Pok Fu Lam Road</li>
+							<li>The University of Hong Kong</li>
+						</ul>
+					</div>
+				</div></div>
+				</div></div>
+				</div>
+			</div>
+		</header>
+		<div class="container" style="height:15px;"></div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="seven columns">
+					<div id="page-wrap">
+					<h2 style="text-align:center; color:white;">Send Us A Message</h2>
+					<form method="post" action="contact.php" id="contactform">
+						<div class="rowElem">
+				<!--	<label for="Name">Name:</label>	-->
+						<input type="text" id="Name" name="Name" type="text" value="Name" cols="30" class="required" minlength="2" onfocus="if (this.value == 'Name') {this.value=''}" onblur="if(this.value == '') { this.value='Name'}" /></div>
+						<div class="rowElem">
+				<!--	<label for="Email">Email:</label>	-->
+						<input type="text" id="Email" name="Email" type="email" value="E-mail Address" class="required" minlength="4" onfocus="if (this.value == 'E-mail Address') {this.value=''}" onblur="if(this.value == '') { this.value='E-mail Address'}"/></div>
+						<div class="rowElem">
+				<!--	<label for="Phone">Phone:</label>	-->
+						<input type="text" id="Phone" name="Phone" type="number" value="Phone Number" onfocus="if (this.value == 'Phone Number') {this.value=''}" onblur="if(this.value == '') { this.value='Phone Number'}"/></div>
+						<div class="rowElem">
+				<!--	<label for="Message">Message:</label>	-->
+						<textarea name="Message" id="Message" rows="8" class="required" minlength="10" onfocus="if (this.value == 'Message') {this.value=''}" onblur="if(this.value == '') { this.value='Message'}">Message</textarea></div>
+						<div class="rowElem">
+						<div id="customerrors"></div>
+						<input type="submit" id="submitbutton" name="submit" value="Send" class="submit-button"/></div>
+					</form>
+					</div>
+				</div>
+				<div class="five columns">
+					<div class="panel">
+						<h2 style="text-align:center;">Contact</h2>
+						<div style="border-bottom: 1px dotted black; padding: 10px 0;"></div>
+						<div class="contactrowed">
+						<span><h4>Phone:</h4></span><div><h4>+852 2546 1221</h4></div>
+						</div>
+						<div class="contactrowed">
+						<span><h4>Fax:</h4></span><div><h4>+852 2517 0280</h4></div>
+						</div>
+						<div class="contactrowed">
+						<span><h4>E-mail:</h4></span><div><h4><a href="mailto:rhsa@hkusua.hku.hk?subject=[Email from Website]">rhsa@hkusua.hku.hk</a></h4></div>
+						</div>
+						<div class="contactrowed" style="padding-bottom:75px;">
+						<span><h4>Office Hours:</h4></span><div><h4>8:00a.m. ~ 10:00p.m.</h4></div><div><h4>(Weekdays)</h4></div>
+						</div>
+						<div class="contactrowed" style="padding-bottom:132px;">
+						<span><h4>Address:</h4></span><div><h4>Ricci Hall</h4></div><div><h4>93, Pok Fu Lam Road</h4></div><div><h4>The University of Hong Kong</h4></div><div><h4>Hong Kong</h4></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="height:15px;"></div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<div id="contactmap" onload="thismap()">
+						<div>
+						<h2 style="text-align:center; color:#800000;">Map</h2>
+						</div>
+						<div id="mapcanvas">						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container" style="height:40px;"></div>
+		<div class="container"><div class="row"><hr></div></div>
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns" id="footer">
+					<p class="subhead">&#169; 2012 Ricci Hall, <a href="http://www.hku.hk" target="_blank">The University of Hong Kong</a>.</p>
+					<p class="subhead">All rights reserved. Ricci Hall Student Association.</p>
+					<p class="subhead"><a href="contact.html" class="subhead">Contact</a> . <a href="privacy-policy.html" class="subhead">Privacy Policy</a></p>
+				</div>
+			</div>
+		</div>
+
+
+	<script src="foundation.js" type="text/javascript"></script>
+	<script src="modernizr.foundation.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript" src="jquery.form.js"></script>
+	<script>
+	// FORM VALIDATION 
+		$(function(){
+			$("#contactform").validate({
+                rules: {
+                    Name: { required: true },
+                    Email: { required: true,
+                    			email: true },
+                    Message: { required: true,
+                    			minlength: 10 }
+                },
+                messages: {
+	                Name: "Please fill in the required fields above!!",
+	                Email: "Please provide a valid email address!!",
+	                Message: { required: "Please fill in the required fields above!!",
+	                			minlength: jQuery.format("Enter at least {0} characters!!") }
+                },
+                errorLabelContainer: $("#customerrors"),
+                groups: {inputs: "Name Email Message"},
+                errorPlacement: function(error, element) {
+	                if (element.attr("name") == "Name" 
+	                || element.attr("name") == "Email" || element.attr("name") == "Message" )
+	                error.insert(errorLabelContainer);
+	                else error.insertAfter(element);
+	            },
+                highlight: function(element) {
+	                $(element).addClass("errorbox");
+                },
+                unhighlight: function(element) { 
+	                $(element).removeClass("errorbox");
+                },
+                submitHandler: function(form) {
+	                $(form).ajaxSubmit({
+		                success: function() {
+			                $('#contactform').hide();
+			                $('#page-wrap').append("<h6 style='color:white; text-align:center; margin-top:40px;'>Thanks! Your message has been sent.</h6>")
+			            }
+			        });
+			    }        
+}); });
+	</script>
+	<script>
+	//GOOGLE MAP
+	$(function thismap() {
+		var latlng = new google.maps.LatLng(22.283904, 114.132371);
+		var settings = {
+			zoom: 16,
+			center: latlng,
+			mapTypeControl: false,
+			streetViewControl: false,
+			navigationControl: false,
+			zoomControl: false,
+			scaleControl: false,
+			scrollwheel: false,
+			disableDoubleClickZoom: true,
+			draggable: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			zoomControl: false
+			};
+		var map = new google.maps.Map(document.getElementById("mapcanvas"), settings);
+		var hallposition = new google.maps.LatLng(22.283904, 114.132371);
+		var uniposition = new google.maps.LatLng(22.284292, 114.137585);
+		var hallLogo = new google.maps.MarkerImage('img/form/halllogo.png',
+			new google.maps.Size(72,102),
+			new google.maps.Point(0,0),
+			new google.maps.Point(36,102)
+			);
+		var hallLogoShadow = new google.maps.MarkerImage('img/form/halllogoshadow.png',
+			new google.maps.Size(95,71),
+				new google.maps.Point(0,0),
+					new google.maps.Point(3, 71)
+			);
+		var hallMarker = new google.maps.Marker({
+			position: hallposition,
+			map: map,
+			icon: hallLogo,
+			shadow: hallLogoShadow,
+			title:"Ricci Hall",
+			animation: google.maps.Animation.DROP
+			});
+		var uniLogo = new google.maps.MarkerImage('img/form/unilogo.png',
+			new google.maps.Size(72,102),
+			new google.maps.Point(0,0),
+			new google.maps.Point(36,102)
+			);
+		var hallLogoShadow = new google.maps.MarkerImage('img/form/halllogoshadow.png',
+			new google.maps.Size(95,71),
+				new google.maps.Point(0,0),
+					new google.maps.Point(3, 71)
+			);
+		var uniMarker = new google.maps.Marker({
+			position: uniposition,
+			map: map,
+			icon: uniLogo,
+			shadow: hallLogoShadow,
+			title:"The University of Hong Kong",
+			animation: google.maps.Animation.DROP
+			});
+		});
+	</script>
+	</body>
+</html>

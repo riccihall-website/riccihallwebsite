@@ -1,0 +1,18 @@
+1	Aquatics
+2	Athletics
+3	Hockey
+4	Lacross
+5	Softball
+6	Basketball
+7	Soccer
+8	Volleyball
+9	Badminton
+10	Squash
+11	Tennis
+12	Table Tennis
+13	Lady Softball
+14	Annual Reunion Ball
+15	Photographic
+16	Current Affairs
+17	Social Services
+18	Drama

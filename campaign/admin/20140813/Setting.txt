@@ -1,0 +1,14 @@
+5	AdminPassword	rhoba1993
+17	SiteDomain	ricci.hku.hk/campaign
+1	SiteName	Campaign for Ricci
+2	BrowserTitle	Campaign for Ricci
+3	SearchKeyword	Ricci Hall, Campaign for Ricci, RHOBA
+10	Languages	Eng
+11	DefaultLanguage	0
+6	RowPerPage	10
+15	HighlightRotationPeriod	8
+12	Phone	(852) 1234 5678
+16	Fax	(852) 1234 5678
+13	Email	rhaw@hku.hk
+25	Email_directory_form	rhaw@hku.hk
+24	Email_contact_form	rhaw@hku.hk
