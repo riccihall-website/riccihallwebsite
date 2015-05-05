@@ -8,6 +8,7 @@
 		<meta http-equiv="Cache-Control" Content="No-Cache">
 		<link rel="stylesheet" href="main.css" type="text/css">
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="sports-orbit.css" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Neuton:400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
 	</head>
@@ -948,7 +949,7 @@
 					
 		<div class="container">
 		<div class="row">
-			<div id="sportbox" class="panel">
+			<div id="sportbox" style="height: 250px" class="panel">
 			<div class="row">
 				<a href="mly1415.html"><div id="sport-1" class="bigsport">
 					<div class="sport-1text">
@@ -957,6 +958,10 @@
 					</div>
 				</div></a>
 			</div>
+		</div></div></div>
+		<div class="container">
+		<div class="row">
+			<div id="sportbox" class="panel">
 			<div class="row">
 				<div class="three columns">
 					<div id="sport0" class="sport">
@@ -1118,14 +1123,50 @@
 				<div class="six columns"></div>
 			</div>
 		</div></div></div>
-		<div class="container" style="height:15px;"></div>
-		<div class="container">
+		
+		
+        
+        
+        <div class="container">
 			<div class="row">
-				<div class="panel">
-					<iframe width="960" height="540" src="http://www.youtube.com/embed/SHcJMPv0LIw" frameborder="0" allowfullscreen></iframe>
+				<div class="twelve columns" style="position:relative;" id="homeorbitbg">	
+					<div id="featured">
+					<img src="img/sports/sports1.jpg" data-caption="#orbitcap1">
+					<img src="img/sports/sports2.jpg" data-caption="#orbitcap2">
+					<img src="img/sports/sports3.jpg" data-caption="#orbitcap3">
+					<img src="img/sports/sports4.jpg" data-caption="#orbitcap4">
+					<img src="img/sports/sports5.jpg" data-caption="#orbitcap5">
+					<img src="img/sports/sports6.jpg" data-caption="#orbitcap6">
+					<img src="img/sports/sports7.jpg" data-caption="#orbitcap7">
+					<img src="img/sports/sports8.jpg" data-caption="#orbitcap8">
+					<img src="img/sports/sports9.jpg" data-caption="#orbitcap9">
+					<img src="img/sports/sports10.jpg" data-caption="#orbitcap10">
+					<img src="img/sports/sports11.jpg" data-caption="#orbitcap11">
+					<img src="img/sports/sports12.jpg" data-caption="#orbitcap12">
+					<img src="img/sports/sports13.jpg" data-caption="#orbitcap13">
+					<img src="img/sports/sports14.jpg" data-caption="#orbitcap14">
+					<img src="img/sports/sports15.jpg" data-caption="#orbitcap15">
+					</div>
+					<span class="orbit-caption" id="orbitcap1"><p>troll a <a href="sports.html">Team</a> here at Ricci!</p></span>
+					<span class="orbit-caption" id="orbitcap2"><p>Read about Riccian <a href="history.html">heritage</a>.</p></span>
+					<span class="orbit-caption" id="orbitcap3"><p><a href="contact.html">Visit</a> us at 93 Pok Fu Lam Road.</p></span>
+					<span class="orbit-caption" id="orbitcap4"><p>Join a <a href="sports.html">Team</a> here at Ricci!</p></span>
+					<span class="orbit-caption" id="orbitcap5"><p>Read about Riccian <a href="history.html">heritage</a>.</p></span>
+					<span class="orbit-caption" id="orbitcap6"><p><a href="contact.html">Visit</a> us at 93 Pok Fu Lam Road.</p></span>
+					<span class="orbit-caption" id="orbitcap7"><p>Join a <a href="sports.html">Team</a> here at Ricci!</p></span>
+					<span class="orbit-caption" id="orbitcap8"><p>Read about Riccian <a href="history.html">heritage</a>.</p></span>
+					<span class="orbit-caption" id="orbitcap9"><p><a href="contact.html">Visit</a> us at 93 Pok Fu Lam Road.</p></span>
+					<span class="orbit-caption" id="orbitcap10"><p>Join a <a href="sports.html">Team</a> here at Ricci!</p></span>
+					<span class="orbit-caption" id="orbitcap11"><p>Read about Riccian <a href="history.html">heritage</a>.</p></span>
+					<span class="orbit-caption" id="orbitcap12"><p><a href="contact.html">Visit</a> us at 93 Pok Fu Lam Road.</p></span>
+					<span class="orbit-caption" id="orbitcap13"><p>Join a <a href="sports.html">Team</a> here at Ricci!</p></span>
+					<span class="orbit-caption" id="orbitcap14"><p>Read about Riccian <a href="history.html">heritage</a>.</p></span>
+					<span class="orbit-caption" id="orbitcap15"><p><a href="contact.html">Visit</a> us at 93 Pok Fu Lam Road.</p></span>
 				</div>
 			</div>
 		</div>
+		
+		<div class="container" style="height:15px;"></div>
 		<div class="container" style="height:40px;"></div>
 		<div class="container"><div class="row"><hr></div></div>
 		<div class="container">
@@ -1168,6 +1209,14 @@
   	<script src="jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
   	<script src="jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
   	<script src="jquery.orbit-1.2.3.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {	
+	$('#featured').orbit({
+  	"bullets" : false,
+  	"animation" : "fade",
+  	"advanceSpeed" : 4000
+  	});});
+  	</script>
   	<script type="text/javascript">
   	jQuery(document).ready(function() {
   	//SMOOTH SCROLLING
